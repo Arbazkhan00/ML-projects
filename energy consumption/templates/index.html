@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Energy Inefficiency Predictor</title>
+</head>
+<body>
+    <h2>Enter Energy Consumption (kWh)</h2>
+    <form method="POST">
+        Machine A: <input type="text" name="machine"><br>
+        HVAC: <input type="text" name="hvac"><br>
+        Lighting: <input type="text" name="lighting"><br>
+        Other: <input type="text" name="other"><br><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction is not none %}
+        <h3>Prediction: {{ 'Inefficient' if prediction==1 else 'Efficient' }}</h3>
+    {% endif %}
+</body>
+</html>
